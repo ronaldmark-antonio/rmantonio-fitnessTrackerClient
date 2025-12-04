@@ -28,7 +28,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const res = await fetch('https://fitnessapi-antonio.onrender.com/users/login', {
+      const res = await fetch('https://rmantonio-fitnesstrackerserver.onrender.com/users/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -60,7 +60,7 @@ export default function Login() {
 
   const retrieveUserDetails = async (token) => {
     try {
-      const res = await fetch('https://fitnessapi-antonio.onrender.com/users/details', {
+      const res = await fetch('https://rmantonio-fitnesstrackerserver.onrender.com/users/details', {
         headers: { Authorization: `Bearer ${token}` },
       });
 

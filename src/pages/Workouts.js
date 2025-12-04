@@ -26,7 +26,7 @@ export default function Workouts() {
 
   const fetchWorkouts = async () => {
     try {
-      const res = await fetch('https://fitnessapi-antonio.onrender.com/workouts/getMyWorkouts', {
+      const res = await fetch('https://rmantonio-fitnesstrackerserver.onrender.com/workouts/getMyWorkouts', {
       	method: 'GET',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -48,7 +48,7 @@ export default function Workouts() {
     e.preventDefault();
 
     try {
-      const res = await fetch('https://fitnessapi-antonio.onrender.com/workouts/addWorkout', {
+      const res = await fetch('https://rmantonio-fitnesstrackerserver.onrender.com/workouts/addWorkout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

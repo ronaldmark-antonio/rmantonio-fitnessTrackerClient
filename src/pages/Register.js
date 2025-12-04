@@ -28,7 +28,7 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const res = await fetch('https://fitnessapi-antonio.onrender.com/users/register', {
+      const res = await fetch('https://rmantonio-fitnesstrackerserver.onrender.com/users/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),

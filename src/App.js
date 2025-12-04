@@ -26,7 +26,7 @@ function App() {
 
     useEffect(() => {
 
-    fetch('https://fitnessapp-api-ln8u.onrender.com/users/details', {
+    fetch('https://rmantonio-fitnesstrackerserver.onrender.com/users/details', {
       headers: {
         Authorization: `Bearer ${ localStorage.getItem('token') }`
       }
