@@ -162,11 +162,11 @@ export default function Workouts() {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <h2 className="fw-bold text-dark">My Workouts</h2>
                 <div>
-                <Button variant="primary" className="me-2" onClick={() => setShowModal(true)}>
-                <i className="bi-plus-circle me-2"></i>
-                Add Workout
-                </Button>
-
+                <Button variant="primary" className="me-2" onClick={() => 
+                  {setName(''); setDuration('');setShowModal(true);}}>
+                  <i className="bi-plus-circle me-2"></i>
+                  Add Workout
+                  </Button>
                 <Button variant="danger" onClick={handleLogout}>
                 <i className="bi-box-arrow-right me-2"></i>
                 Logout
@@ -177,7 +177,7 @@ export default function Workouts() {
               {workouts.length > 0 ? (
                 <Row className="g-4">
                   {workouts.map((workout) => (
-                    <Col md={6} lg={4} key={workout._id}>
+                    <Col xs={12} sm={6} md={4} lg={3} key={workout._id}>
                       <WorkoutCard
                         workout={workout}
                         onEdit={() => openEditModal(workout)}

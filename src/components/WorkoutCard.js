@@ -20,12 +20,12 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
       >
         <div className="d-flex gap-2">
           <Button variant="outline-primary" size="sm" onClick={onEdit}>
-            <i className="bi bi-pencil-square me-1"></i>
-            Edit
+            <i className="bi bi-pencil-square"></i>
+            
           </Button>
           <Button variant="outline-danger" size="sm" onClick={onDelete}>
-            <i className="bi bi-trash me-1"></i>
-            Delete
+            <i className="bi bi-trash"></i>
+            
           </Button>
         </div>
       </div>
