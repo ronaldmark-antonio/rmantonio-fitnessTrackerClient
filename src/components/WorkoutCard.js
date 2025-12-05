@@ -12,7 +12,7 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
 
   return (
     <Card 
-      className="border rounded-0 h-100 mb-3 position-relative"
+      className="border rounded-0 h-100 position-relative"
       style={{ minHeight: '180px' }}
     >
       <div 
@@ -27,8 +27,7 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
             size="sm"
             onClick={onEdit}
           >
-            <i className="bi bi-pencil-square me-1"></i>
-            Edit
+            <i className="bi bi-pencil-square"></i> 
           </Button>
 
           {/* DELETE BUTTON */}
@@ -37,14 +36,13 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
             size="sm"
             onClick={onDelete}
           >
-            <i className="bi bi-trash me-1"></i>
-            Delete
+            <i className="bi bi-trash"></i>
           </Button>
 
         </div>
       </div>
 
-      <Card.Body className="p-3 d-flex flex-column justify-content-between">
+      <Card.Body className="d-flex flex-column justify-content-between p-3 my-4">
 
         <div>
           <Card.Title className="fw-semi-bold mb-2 mt-3">{workout.name}</Card.Title>

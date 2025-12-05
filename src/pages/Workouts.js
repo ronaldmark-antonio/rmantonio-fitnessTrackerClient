@@ -176,16 +176,16 @@ export default function Workouts() {
 
               {workouts.length > 0 ? (
                 <Row className="g-4">
-                  {workouts.map((workout) => (
-                    <Col md={6} lg={4} key={workout._id}>
-                      <WorkoutCard
-                        workout={workout}
-                        onEdit={() => openEditModal(workout)}
-                        onDelete={() => deleteWorkout(workout._id)}
-                      />
-                    </Col>
+                {workouts.map((workout) => (
+                  <Col xs={12} sm={6} md={4} lg={3} key={workout._id}>
+                  <WorkoutCard
+                  workout={workout}
+                  onEdit={() => openEditModal(workout)}
+                  onDelete={() => deleteWorkout(workout._id)}
+                  />
+                  </Col>
                   ))}
-                </Row>
+                  </Row>
               ) : (
                 <p className="text-muted text-center">No workouts yet.</p>
               )}
