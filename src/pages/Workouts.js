@@ -62,7 +62,7 @@ export default function Workouts() {
 
       const data = await res.json();
       if (res.status === 201) {
-        notyf.success('Workout Added!');
+        notyf.success('Workout added successfully!');
         setShowModal(false);
         setName('');
         setDuration('');
@@ -102,7 +102,7 @@ export default function Workouts() {
       const data = await res.json();
 
       if (res.status === 200) {
-        notyf.success('Workout updated!');
+        notyf.success('Workout updated successfully!');
         setShowEditModal(false);
         setSelectedWorkout(null);
         setName('');
@@ -132,7 +132,7 @@ export default function Workouts() {
       );
 
       if (res.status === 200) {
-        notyf.success('Workout deleted!');
+        notyf.success('Workout deleted successfully!');
         fetchWorkouts();
       } else {
         notyf.error('Failed to delete workout');
