@@ -40,7 +40,7 @@ export default function Login() {
         const token = data.access;
 
         localStorage.setItem('token', token);
-        notyf.success('Login Successful');
+        notyf.success('Login successfully!');
 
         navigate('/workouts', { replace: true });
 

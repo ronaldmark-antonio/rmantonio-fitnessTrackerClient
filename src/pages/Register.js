@@ -38,7 +38,7 @@ export default function Register() {
 
       if (data.message === 'Registered Successfully') {
         	
-        	notyf.success('Registration Successful!');
+        	notyf.success('Registration successfully!');
         	
         	setEmail('');
         	setPassword('');
