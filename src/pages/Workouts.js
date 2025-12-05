@@ -163,12 +163,12 @@ export default function Workouts() {
                 <h2 className="fw-bold text-dark">My Workouts</h2>
                 <div>
                 <Button variant="primary" className="me-2" onClick={() => setShowModal(true)}>
-                <i className="bi-plus-circle me-2"></i>
+                <i className="bi-plus-circle me-1"></i>
                 Add Workout
                 </Button>
 
                 <Button variant="danger" onClick={handleLogout}>
-                <i className="bi-box-arrow-right me-2"></i>
+                <i className="bi-box-arrow-right me-1"></i>
                 Logout
                 </Button>
                 </div>
@@ -253,10 +253,10 @@ export default function Workouts() {
               </Form.Group>
 
               <div className="d-flex justify-content-end">
-                <Button variant="danger" className="me-2" onClick={() => setShowEditModal(false)}>
+                <Button variant="danger" className="me-2" onClick={() => setShowEditModal(false)}><i className="bi-x-circle me-1"></i>
                   Cancel
                 </Button>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"><i className="bi-check-circle me-1"></i>
                   Save Changes
                 </Button>
               </div>
