@@ -175,8 +175,11 @@ export default function Workouts() {
               </div>
 
               {workouts.length > 0 ? (
-                <Row className="g-4">
-                  {workouts.map((workout) => (
+              <Row className="g-4">
+                {workouts
+                  .slice() // make a copy to avoid mutating state
+                  .sort((a, b) => new Date(b.dateAdded) - new Date(a.dateAdded)) // newest first
+                  .map((workout) => (
                     <Col xs={12} sm={6} md={4} lg={3} key={workout._id}>
                       <WorkoutCard
                         workout={workout}
@@ -185,10 +188,11 @@ export default function Workouts() {
                       />
                     </Col>
                   ))}
-                </Row>
-              ) : (
-                <p className="text-muted text-center">No workouts yet.</p>
-              )}
+              </Row>
+            ) : (
+              <p className="text-muted text-center">No workouts yet.</p>
+            )}
+
             </Card.Body>
           </Card>
         </>
