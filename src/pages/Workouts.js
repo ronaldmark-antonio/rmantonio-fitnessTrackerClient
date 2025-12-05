@@ -221,10 +221,10 @@ export default function Workouts() {
               </Form.Group>
 
               <div className="d-flex justify-content-end">
-                <Button variant="danger" className="me-2" onClick={() => setShowModal(false)}>
+                <Button variant="danger" className="me-2" onClick={() => setShowModal(false)}><i className="bi-x-circle me-1 me-1"></i>
                   Cancel
                 </Button>
-                <Button variant="primary" type="submit">
+                <Button variant="primary" type="submit"><i className="bi-check-circle me-1"></i>
                   Submit
                 </Button>
               </div>
