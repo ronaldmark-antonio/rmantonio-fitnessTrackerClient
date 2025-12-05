@@ -1,7 +1,6 @@
 import { Card, Badge, Button } from 'react-bootstrap';
 
 export default function WorkoutCard({ workout, onEdit, onDelete }) {
-
   const capitalizeFirstLetter = (str) => {
     if (!str) return 'Active';
     return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -20,37 +19,23 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
         style={{ top: "10px", right: "10px", zIndex: 10 }}
       >
         <div className="d-flex gap-2">
-
-          {/* EDIT BUTTON */}
-          <Button 
-            variant="outline-primary"
-            size="sm"
-            onClick={onEdit}
-          >
-            <i className="bi bi-pencil-square"></i> 
+          <Button variant="outline-primary" size="sm" onClick={onEdit}>
+            <i className="bi bi-pencil-square me-1"></i>
+            Edit
           </Button>
-
-          {/* DELETE BUTTON */}
-          <Button 
-            variant="outline-danger"
-            size="sm"
-            onClick={onDelete}
-          >
-            <i className="bi bi-trash"></i>
+          <Button variant="outline-danger" size="sm" onClick={onDelete}>
+            <i className="bi bi-trash me-1"></i>
+            Delete
           </Button>
-
         </div>
       </div>
 
-      <Card.Body className="d-flex flex-column justify-content-between p-3 my-4">
-
+      <Card.Body className="d-flex flex-column justify-content-between p-3">
         <div>
           <Card.Title className="fw-semi-bold mb-2 mt-3">{workout.name}</Card.Title>
-
           <Card.Text className="text-muted mb-1">
             Duration: {workout.duration}
           </Card.Text>
-
           <small className="d-block text-muted mb-1">
             Date Added: {new Date(workout.dateAdded).toLocaleDateString()}
           </small>
@@ -62,7 +47,6 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
             {status}
           </Badge>
         </div>
-
       </Card.Body>
     </Card>
   );

@@ -163,12 +163,12 @@ export default function Workouts() {
                 <h2 className="fw-bold text-dark">My Workouts</h2>
                 <div>
                 <Button variant="primary" className="me-2" onClick={() => setShowModal(true)}>
-                <i className="bi-plus-circle me-1"></i>
+                <i className="bi-plus-circle me-2"></i>
                 Add Workout
                 </Button>
 
                 <Button variant="danger" onClick={handleLogout}>
-                <i className="bi-box-arrow-right me-1"></i>
+                <i className="bi-box-arrow-right me-2"></i>
                 Logout
                 </Button>
                 </div>
@@ -176,16 +176,16 @@ export default function Workouts() {
 
               {workouts.length > 0 ? (
                 <Row className="g-4">
-                {workouts.map((workout) => (
-                  <Col xs={12} sm={6} md={4} lg={3} key={workout._id}>
-                  <WorkoutCard
-                  workout={workout}
-                  onEdit={() => openEditModal(workout)}
-                  onDelete={() => deleteWorkout(workout._id)}
-                  />
-                  </Col>
+                  {workouts.map((workout) => (
+                    <Col md={6} lg={4} key={workout._id}>
+                      <WorkoutCard
+                        workout={workout}
+                        onEdit={() => openEditModal(workout)}
+                        onDelete={() => deleteWorkout(workout._id)}
+                      />
+                    </Col>
                   ))}
-                  </Row>
+                </Row>
               ) : (
                 <p className="text-muted text-center">No workouts yet.</p>
               )}
@@ -253,7 +253,7 @@ export default function Workouts() {
               </Form.Group>
 
               <div className="d-flex justify-content-end">
-                <Button variant="danger" className="me-2" onClick={() => setShowEditModal(false)}><i className="bi-x-circle me-1"></i>
+                <Button variant="danger" className="me-2" onClick={() => setShowEditModal(false)}><i className="bi-x-circle me-1 me-1"></i>
                   Cancel
                 </Button>
                 <Button variant="primary" type="submit"><i className="bi-check-circle me-1"></i>
