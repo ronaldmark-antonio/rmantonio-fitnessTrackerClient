@@ -162,12 +162,15 @@ export default function Workouts() {
               <div className="d-flex justify-content-between align-items-center mb-4">
                 <h2 className="fw-bold text-dark">My Workouts</h2>
                 <div>
-                  <Button variant="primary" className="me-2" onClick={() => setShowModal(true)}>
-                    + Add Workout
-                  </Button>
-                  <Button variant="danger" onClick={handleLogout}>
-                    Logout
-                  </Button>
+                <Button variant="primary" className="me-2" onClick={() => setShowModal(true)}>
+                <i className="bi-plus-circle me-2"></i>
+                Add Workout
+                </Button>
+
+                <Button variant="danger" onClick={handleLogout}>
+                <i className="bi-box-arrow-right me-2"></i>
+                Logout
+                </Button>
                 </div>
               </div>
 

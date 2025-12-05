@@ -20,21 +20,27 @@ export default function WorkoutCard({ workout, onEdit, onDelete }) {
         style={{ top: "10px", right: "10px", zIndex: 10 }}
       >
         <div className="d-flex gap-2">
+
+          {/* EDIT BUTTON */}
           <Button 
             variant="outline-primary"
             size="sm"
             onClick={onEdit}
           >
+            <i className="bi bi-pencil-square me-1"></i>
             Edit
           </Button>
 
+          {/* DELETE BUTTON */}
           <Button 
             variant="outline-danger"
             size="sm"
             onClick={onDelete}
           >
+            <i className="bi bi-trash me-1"></i>
             Delete
           </Button>
+
         </div>
       </div>
 
