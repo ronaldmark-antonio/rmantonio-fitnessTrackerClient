@@ -151,16 +151,12 @@ export default function Workouts() {
 
   return (
     <Container className="py-5" style={{ backgroundColor: 'rgb(255,255,255)' }}>
-      <div className="mb-4">
-        <img src={logo} alt="FitVerse Logo" className="img-fluid mb-1" style={{ maxWidth: '160px' }} />
-      </div>
-
       {user ? (
         <>
           <Card className="shadow-lg border-0 rounded-0 p-4">
             <Card.Body>
               <div className="d-flex justify-content-between align-items-center mb-4">
-                <h2 className="fw-bold text-dark">My Workouts</h2>
+                <h2 className="fw-bold text-dark"><img src={logo} alt="FitVerse Logo" className="img-fluid mb-1" style={{ maxWidth: '160px' }} />| My Workouts</h2>
                 <div>
                 <Button variant="primary" className="me-2" onClick={() => 
                   {setName(''); setDuration('');setShowModal(true);}}>
